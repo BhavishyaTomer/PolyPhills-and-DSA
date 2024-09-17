@@ -1,10 +1,8 @@
-Function.prototype.MyCustomBind=function(referenceObj={},...myArg){
+Function.prototype.MyCustomApply=function(referenceObj={},myArg=[]){
     if(typeof(newFunction)!="function")
     {
         console.error("it is not a callable function");        
     }
    referenceObj.fn=this
-   return function(){
-    return referenceObj.fn(...myArg)
-   }
+   referenceObj.fn(...myArg)
 }
