@@ -4,7 +4,7 @@ Array.prototype.MyCustomFilter=function(cb){
     {
         if(cb(this[i],i,this))
         {
-            temp.push(this[i])
+            temp.push(this[i])   //current Value
         }
     }
     return temp;

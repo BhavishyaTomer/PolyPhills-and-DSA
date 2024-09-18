@@ -1,5 +1,5 @@
 Function.prototype.MyCustomApply=function(referenceObj={},myArg=[]){
-    if(typeof(newFunction)!="function")
+    if(typeof(this)!="function")
     {
         console.error("it is not a callable function");        
     }

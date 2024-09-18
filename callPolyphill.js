@@ -1,5 +1,5 @@
 Function.prototype.MyCustomCall=function(referenceObj={},...arg){
-    if(typeof(newFunction)!="function")
+    if(typeof(this)!="function")
     {
         console.error("it is not a callable function");        
     }
