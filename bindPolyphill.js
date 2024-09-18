@@ -4,7 +4,7 @@ Function.prototype.MyCustomBind=function(referenceObj={},...myArg){
         console.error("it is not a callable function");        
     }
    referenceObj.fn=this
-   return function(){
-    return referenceObj.fn(...myArg)
+   return function(...newArg){
+    return referenceObj.fn(...myArg,...newArg)
    }
 }
