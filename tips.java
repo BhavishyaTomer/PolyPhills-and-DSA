@@ -5,4 +5,4 @@
 // while (left <= right) {
 //     int mid = left + (right - left) / 2
 
-// always find mid by int mid = left + (right - left) / 2
+// always find mid by int mid = left + (right - left) / 2 
