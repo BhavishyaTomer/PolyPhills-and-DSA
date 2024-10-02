@@ -97,6 +97,8 @@ public class Main {
          list1.insertAtTheBeginning(4);
          list1.insertInBetween(2, 3);
          list1.getPositionOf(8);
+
+         
          list1.deleteAtPosition(2);  
          list1.display();
      }
