@@ -17,10 +17,37 @@ throttle=()=>{
 throttleCount++;
 c.innerText=throttleCount
 }
-const debounceCount=_.debounce(debounceInitializer,300)
+
+let timer;
+
+const debounceCount=(delay)=>{
+
+    return function(){
+        clearTimeout(timer);
+     timer=setTimeout(()=>{
+        debounceInitializer()
+     },delay)
+    }
+}
+let last = 0;
+const throttlePolyfill = (cb, delay) => {
+    
+    return function (...args) {
+        const now = Date.now();
+        if (now - last >= delay) {
+            last = now;
+            cb.apply(this, args);
+        }
+    };
+};
+
+;
+
+
 const throttleIncreaser=_.throttle(throttle, 300)
 d.addEventListener('click',()=>{
     increaseCount()
-   debounceCount()
-   throttleIncreaser();
+   debounceCount(300)()
+   throttlePolyfill(throttle,1000)();
+
 })
