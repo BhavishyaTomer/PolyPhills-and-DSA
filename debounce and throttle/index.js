@@ -13,7 +13,8 @@ debounceInitializer=()=>{
     debouceCount++;
     b.innerText=debouceCount
 }
-throttle=()=>{
+throttle=(arg)=>{
+console.log(arg)
 throttleCount++;
 c.innerText=throttleCount
 }
@@ -48,6 +49,6 @@ const throttleIncreaser=_.throttle(throttle, 300)
 d.addEventListener('click',()=>{
     increaseCount()
    debounceCount(300)()
-   throttlePolyfill(throttle,1000)();
+   throttlePolyfill(throttle,1000)("hello");
 
 })
